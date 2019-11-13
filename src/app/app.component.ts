@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,15 @@ import { Component, ElementRef } from '@angular/core';
 export class AppComponent {
   title = 'PGTourAdmin';
 
-  constructor(private elementRef: ElementRef){
+  constructor(private elementRef: ElementRef, private router: Router) {
 
   }
-  // tslint:disable-next-line: use-life-cycle-interface
-  ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#5D4B9D';
- }
+
+  // ngAfterViewInit() {
+  //   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#5D4B9D';
+  // }
+
+  logar() {
+    this.router.navigate(['/home']);
+  }
 }

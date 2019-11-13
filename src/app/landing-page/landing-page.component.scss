@@ -1,0 +1,79 @@
+.admin {
+    color: white;
+    margin: 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.btn-entrar {
+    width: 10rem;
+    border-radius: 2rem;
+    font-weight: bolder;
+    color: white;
+    background-color: #5D4B9D;
+}
+
+#loggin {
+    -webkit-appearance: none;
+    border-radius: 2rem;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    height: 4rem;
+    color: white;
+    background-color: #00AAE2;
+}
+
+.form-control {
+    font-size: 13px;
+    border-radius: 2rem;
+    padding: 0 1rem;
+}
+
+.container {
+    height: 100%;
+    background-color: #5D4B9D;
+}
+
+.middle {
+    top: 28%;
+    text-align: center;
+    position: relative;
+}

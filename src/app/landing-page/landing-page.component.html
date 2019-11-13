@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="animated animatedFadeInUp fadeInUp middle">
+    <img width="300" alt="PGTour Logo" src="../assets/logo-purple.svg">
+    <h1 class="font admin">Admin</h1>
+    <button class="" id="loggin" data-toggle="modal" data-target="#login">Entrar</button>
+  </div>
+</div>
+
+<!--MODALs-->
+<div id="login" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="border-radius: 2rem">
+      <div class="modal-body" style="padding: 2rem;">
+        <form>
+          <div class="form-group font">
+            <label for="email">Usuário</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Usuário">
+            <small id="emailHelp" class="form-text text-muted">Utilize o usuário master para entrar no sistema.</small>
+          </div>
+          <div class="form-group font">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          </div>
+          <div style="justify-content: center; display: flex; margin-top: 2rem;">
+            <button type="submit" class="btn btn-primary font btn-entrar" (click)="logar()" data-dismiss="modal">Entrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
