@@ -1,0 +1,60 @@
+.background {
+    background-color: #5D4B9D;
+    size: 100%;
+    text-align: center;
+}
+
+.admin {
+    color: white;
+    margin: 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+#login {
+    -webkit-appearance: none;
+    border-radius: 2rem;
+    width: 300px;
+    font-size: 1rem;
+    font-weight: bolder;
+    height: 2rem;
+    color: white;
+    background-color: #00AAE2;
+}
