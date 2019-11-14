@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h3 class="font desc-page">Cadastrar um novo ponto</h3>
+    <div>
+
+    </div>
+    <h3 class="font desc-page">Selecione para editar ou remover</h3>
+    <div>
+        <div class="font center-flex" style="margin: 0.5rem;" *ngFor="let item of [1,2,3,4]"><a href="" style="color: black;" data-toggle="modal" data-target="#edit-ponto">
+            <td>
+                <tr><img src="../../assets/local.png"></tr>
+            </td>
+            <td style="place-self: center; margin-left: 1rem;">
+                <tr><div class="name" style="margin-left: 1rem;">Nome do ponto {{ item }}</div></tr>
+            </td>
+        </a></div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="edit-ponto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="center-flex">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                </div>
+                <div class="center-flex">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,17 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'PGTourAdmin';
+  title = 'Admin PGTour';
 
-  constructor(private elementRef: ElementRef, private router: Router) {
-
-  }
-
-  // ngAfterViewInit() {
-  //   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#5D4B9D';
-  // }
-
-  logar() {
-    this.router.navigate(['/home']);
-  }
+  constructor() {}
 }

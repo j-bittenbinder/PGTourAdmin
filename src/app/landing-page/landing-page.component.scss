@@ -51,6 +51,7 @@
 }
 
 #loggin {
+    margin: 1rem;
     -webkit-appearance: none;
     border-radius: 2rem;
     width: 10rem;
@@ -68,6 +69,7 @@
 }
 
 .container {
+    max-width: 100%;
     height: 100%;
     background-color: #5D4B9D;
 }
