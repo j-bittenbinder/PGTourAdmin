@@ -6,30 +6,74 @@
     </div>
     <h3 class="font desc-page">Selecione para editar ou remover</h3>
     <div>
-        <div class="font center-flex" style="margin: 0.5rem;" *ngFor="let item of [1,2,3,4]"><a href="" style="color: black;" data-toggle="modal" data-target="#edit-ponto">
+        <div class="font center-flex" style="margin: 0.5rem;" *ngFor="let ponto of pontos"><a href="" style="color: black;" 
+            data-toggle="modal" (click)="visualizarPonto(ponto.id_ponto)">
             <td>
                 <tr><img src="../../assets/local.png"></tr>
             </td>
             <td style="place-self: center; margin-left: 1rem;">
-                <tr><div class="name" style="margin-left: 1rem;">Nome do ponto {{ item }}</div></tr>
+                <tr><div class="name" style="margin-left: 1rem;">{{ ponto.nome }}</div></tr>
             </td>
         </a></div>
     </div>
 </div>
-
+<button id="open" [hidden]="true" data-toggle="modal" data-target="#edit-ponto"></button>
 <!-- Modal -->
-<div class="modal fade" id="edit-ponto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="edit-ponto" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+        <div class="modal-content" style="border-radius: 2rem;">
             <div class="modal-body">
                 <div class="center-flex">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Editar ponto</h5>
+                </div>
+                <div style="margin: 1rem 0;">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group font">
+                                <label for="i-d">ID</label>
+                                <input type="text" class="form-control" id="i-d" placeholder="{{ ponto.id_ponto }}" readonly>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group font">
+                                <label for="qt">Quantidade de visitas</label>
+                                <input type="text" class="form-control" id="qt" placeholder="{{ ponto.quantidade_visita }}" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group font">
+                        <label for="name">Nome do ponto</label>
+                        <input type="text" class="form-control" id="name" value="{{ ponto.nome }}">
+                    </div>
+                    <div class="form-group font">
+                        <label for="txt-area">Descrição do ponto</label>
+                        <textarea class="form-control" id="txt-area" rows="3" value="{{ ponto.descricao }}" style="border-radius: 1.5rem;"></textarea>
+                    </div>
+                    <div class="form-group font">
+                        <label for="endr">Endereço</label>
+                        <input type="text" class="form-control" id="endr" value="{{ ponto.endereco }}">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group font">
+                                <label for="lat">Latitude</label>
+                                <input type="text" class="form-control" id="lat" value="{{ ponto.latitude }}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group font">
+                                <label for="lng">Longitude</label>
+                                <input type="text" class="form-control" id="lng" value="{{ ponto.longitude }}">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="center-flex">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-dismiss="modal">Voltar</button>
                     <button type="button" class="btn btn-primary">Salvar</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
